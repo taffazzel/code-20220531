@@ -1,0 +1,22 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool: 
+  name: adp-self-hosted-agent
+  demands: 
+    - OS -equals Linux
+steps:
+  
+  - task: S3Upload@1
+    inputs:
+      awsCredentials: 'xxx'
+      regionName: 'eu-west-1'
+      bucketName: 'xxxx'
+      sourceFolder: 'src/'
+      globExpressions: '*.py'
+      createBucket: 'true'
