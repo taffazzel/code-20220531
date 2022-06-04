@@ -3,20 +3,28 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+
 trigger:
 - master
 
-pool: 
-  name: adp-self-hosted-agent
-  demands: 
-    - OS -equals Linux
-steps:
-  
+pool:
+  vmImage: 'ubuntu-latest'
+
+
+jobs:
+- job: Unit_Test
+
+  steps:
+  - script: python test/Calculation_Test.py
+
+- job: S3_Upload
+  dependsOn: Unit_Test
+  condition: succeeded()
+  steps:
   - task: S3Upload@1
     inputs:
-      awsCredentials: 'xxx'
+      awsCredentials: 'XXX'
       regionName: 'eu-west-1'
-      bucketName: 'xxxx'
+      bucketName: 'XXX'
       sourceFolder: 'src/'
-      globExpressions: '*.py'
-      createBucket: 'true'
+      globExpressions: 'bmi_cal.py'
