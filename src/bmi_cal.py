@@ -3,7 +3,6 @@ import pandas as pd
 import json
 
 
-
 class Calculation:
     def __init__(self):
         self.base = ''
