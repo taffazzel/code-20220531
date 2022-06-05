@@ -21,7 +21,7 @@ class CalculationTest(unittest.TestCase):
 
     def test_calbmi(self):
         s3 = boto3.client('s3')
-        bucket = 'adp-qubole'
+        bucket = 'XXX'
         key = 'test-pipeline/input.json'
         response = s3.get_object(Bucket=bucket, Key=key)
         content = response['Body']
