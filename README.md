@@ -14,3 +14,5 @@ We can logically divide the use case into this below sections:
 3. Docker images built and pushed to ECR
 4. AWS managed Docker (ECS) get executed by AWS managed Airflow DAG.
 
+## Further development:
+infrastructure as code can be implemented. Terraform can be a good choioce 
