@@ -1,5 +1,5 @@
 # CI/CD pipeline 
-A CI/CD pipeline with docker images scheduled and executed by Airflow
+A CI/CD pipeline for an application code on docker container scheduled and executed by Airflow
 
 ![CI-CD-4](https://user-images.githubusercontent.com/17614336/172147450-714fe9ff-acbd-4ce6-9774-4e0f6a8f531a.jpg)
 
