@@ -15,7 +15,7 @@ jobs:
 - job: Unit_Test
 
   steps:
-  - script: python test/Calculation_Test.py
+  - script: python src/bmi_cal_test.py 
 
 - job: S3_Upload
   dependsOn: Unit_Test
