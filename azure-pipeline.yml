@@ -39,7 +39,7 @@ jobs:
 
   - task: ECRPushImage@1
     inputs:
-      awsCredentials: 'XXX'
+      awsCredentials: 'Name_of_service_connection'
       regionName: $(AWS_REGION)
       imageSource: 'imagename'
       sourceImageName: $(AWS_ECR_MAGE_URI)
