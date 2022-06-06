@@ -9,7 +9,7 @@ The pipeline shows when a developer upadtes any code in their local machine and 
 ## Sections of the use case:
 We can logically divide the use case into this below sections:
 
-1. Developer updates 
+1. Developer develops/updates application code in test driven approach.
 2. CI/CD triggers
 3. Docker images built and pushed to ECR
 4. AWS managed Docker (ECS) get executed by AWS managed Airflow DAG.
